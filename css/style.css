@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.head {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(58, 55, 48);
+    margin-top: 0;
+    position: fixed;
+    box-shadow: 0px 1px 0.5em grey;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#titulo {
+    display: flex;
+    margin-top: 120px;
+    color: rgb(0, 0, 0);
+}
+
+#descricao {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.first-column {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex: 2 0 auto;
+    height: 100%;
+    background-color: beige;
+}
+
+.second-column {
+    background-color: rgb(182, 161, 207);
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    flex: 1 0 auto;
+    box-shadow: -1px 0px 1em rgb(199, 177, 226);
+}
+
+label {
+    text-align: left;
+    padding-left: 8px;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+}
+
+#form input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    outline: 0;
+    border-bottom: 3px solid rgb(73, 73, 73);
+    background-color: rgb(243, 240, 240);
+    margin: 3px;
+    padding: 10px;
+    box-shadow: 2px 0px rgb(73, 73, 73);
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+span.erro {
+    position: relative;
+    text-align: left;
+    color: rgb(255, 0, 0);
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+#form #button {
+    border: none;
+    background-color: rgb(113, 3, 117);
+    border-radius: 5px;
+    height: 45px;
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-size: larger;
+    box-shadow: none;
+}
+
+#form #button:hover {
+    transform: scale(1.01);
+    background-color: rgb(63, 0, 59);
+    color: white;
+    transition: 0.7s;
+}
+
+img {
+    height: 500px;
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(104, 0, 90);
+    font-size: 16px;
+}
+
+#forgot-senha {
+    text-decoration: none;
+    color:  rgb(182, 161, 207);
+    font-size: 13px;
+    text-align: left;
+    padding-left: 8px;
+    width: 145px;
+}
+
+#forgot-senha:hover {
+    transform: scale(1);
+    text-decoration: underline;
+}
+
+a:hover {
+    font-weight: bolder;
+    color: rgb(59, 0, 61);
+    transform: scale(1.07);
+}
+
+p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
