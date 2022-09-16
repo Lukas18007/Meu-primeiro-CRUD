@@ -6,20 +6,17 @@ $erroRepeteSenha ="";
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-        //VERIFICAR SE ESTÁ VAZIO O POST NOME
+        
         if (empty($_POST['nome'])){
             $erroNome = "Por favor, preencha um nome";
         }else{
-            //PEGAR O VALOR VINDO DO POST E LIMPAR
             $nome = limpaPost($_POST['nome']);
-
-            //VERIFICAR SE TEM SOMENTE LETRAS
             if(!preg_match("/^[a-zA-Z-' ]*$/", $nome)){
                 $erroNome = "Apenas aceitamos letras e espaços em branco!";
             }
         }
 
-         //VERIFICAR SE ESTÁ VAZIO O POST EMAIL
+         
         if (empty($_POST['email'])){
             $erroEmail = "Por favor, informe um e-mail";
         }else{
@@ -29,8 +26,8 @@ $erroRepeteSenha ="";
             }
         }
 
-         //VERIFICAR SE ESTÁ VAZIO O POST SENHA
-         if (empty($_POST['senha'])){
+         
+        if (empty($_POST['senha'])){
             $erroSenha = "Por favor, informe uma senha";
         }else{
             $senha = limpaPost($_POST['senha']);
@@ -39,7 +36,7 @@ $erroRepeteSenha ="";
             }
         }
 
-        //VERIFICAR SE ESTÁ VAZIO O POST REPETE_SENHA
+        
         if (empty($_POST['repete_senha'])){
             $erroRepeteSenha = "Por favor, informe a repetição da senha";
         }else{
@@ -50,7 +47,7 @@ $erroRepeteSenha ="";
         }
 
         include_once('config.php');
-        //SE NÃO TIVER NENHUM ERRO ENVIAR PARA OBRIGADO
+        
         if(($erroNome=="") && ($erroEmail=="") && ($erroSenha=="") && ($erroRepeteSenha=="")){
             if (isset($_POST['submit'])) {
                 $result = mysqli_query($conexao, "INSERT INTO users(nome, email, senha) VALUES ('$nome', '$email', '$senha')");
